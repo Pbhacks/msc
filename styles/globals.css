@@ -51,9 +51,9 @@ body {
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+    --card: 0 0% 4%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
+    --popover: 0 0% 4%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
@@ -90,5 +90,29 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+  button {
+    @apply bg-primary text-primary-foreground py-2 px-4 rounded-md border border-transparent hover:bg-primary-foreground hover:text-primary transition-colors;
+  }
+  .card {
+    @apply bg-card text-card-foreground p-4 rounded-md shadow-lg;
+  }
+  .input {
+    @apply bg-input text-foreground px-4 py-2 rounded-md border border-border;
+  }
+  .header {
+    @apply bg-sidebar-primary text-sidebar-primary-foreground p-4 rounded-t-md shadow-lg;
+  }
+  .footer {
+    @apply bg-sidebar-accent text-sidebar-accent-foreground p-4 rounded-b-md;
+  }
+  .table-header {
+    @apply bg-primary text-primary-foreground font-bold p-3 rounded-t-md;
+  }
+  .table-row {
+    @apply border-b border-border p-3;
+  }
+  .table-row:hover {
+    @apply bg-muted text-muted-foreground;
   }
 }
